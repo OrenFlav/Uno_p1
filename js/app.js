@@ -97,11 +97,6 @@ document.getElementById("replyForm").addEventListener("submit", function (e) {
   sendNote.className = "send-note";
 
   // ── EmailJS send ──────────────────────────────────────────
-  // These template variables must match your EmailJS template.
-  // In your EmailJS template, use:
-  //   {{from_name}}    → sender's name
-  //   {{message}}      → reply message
-  //   {{to_email}}     → your Gmail (already set below)
   emailjs
     .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
       from_name: senderName,
