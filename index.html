@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Uno 💌</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💌</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ── FLOATING HEARTS BACKGROUND ─────────────────────── -->
+    <div class="hearts-bg" id="heartsBg"></div>
+
+    <!-- ── MEME STRIP (top) ────────────────────────────────── -->
+    <div class="meme-strip top">
+      <img src="images/meme1.jpg" alt="meme" />
+      <img src="images/meme2.jpg" alt="meme" />
+      <img src="images/meme3.jpg" alt="meme" />
+    </div>
+
+    <!-- ── MAIN STAGE ──────────────────────────────────────── -->
+    <main class="stage">
+      <!-- STEP 1: ENVELOPE (click to open) -->
+      <div class="scene" id="sceneEnvelope">
+        <div class="envelope-wrap" id="envelopeWrap" onclick="openEnvelope()">
+          <div class="envelope" id="envelope">
+            <!-- Envelope flap (top triangle) -->
+            <div class="flap" id="flap"></div>
+
+            <!-- Envelope body -->
+            <div class="env-body">
+              <div class="env-heart">💌</div>
+              <p class="env-hint">Open Sesamen</p>
+            </div>
+
+            <!-- Letter peeking out -->
+            <div class="letter-peek" id="letterPeek">
+              <span>For Ms.Uno 🃏🌸</span>
+            </div>
+          </div>
+          <p class="env-label">You drop something&nbsp;✨</p>
+        </div>
+      </div>
+
+      <!-- STEP 2: CARD (revealed after envelope opens) -->
+      <div class="scene hidden" id="sceneCard">
+        <div class="card" id="card">
+          <!-- Card header -->
+          <div class="card-header">
+            <span class="card-tag">a message from an alien 🤡</span>
+            <h1 class="card-to">Hi, Ms. Uno 🤭🫣</h1>
+          </div>
+
+          <!-- ─────────────────────────────────────────────────
+             ✏️  YOUR MESSAGE GOES HERE
+             Edit the text inside the <p> tags below.
+             You can add more <p> tags if the message is long.
+             Each <p> becomes its own paragraph.
+        ────────────────────────────────────────────────── -->
+          <div class="card-message" id="cardMessage">
+            <p>
+              <!-- ✏️ EDIT THIS — paragraph 1 -->
+              Kanang kuan wako kahibaw unsaon ni pagstart pero Im your murag
+              secret admirer hihi wakoy sure og kaila baka nako so murag secret
+              admirer nalang HAHAHAHA segi man gud kog kakita nimo and ganahan
+              sad ko sa imong pagkasimple🫣 mura kag Just The Way You Are by
+              Bruno Mars. Wakoy sure og tigkakita basad ka nako kay murag mas
+              mubo paman ko nimo HAHAHA or murag same-same ratag height wapa
+              kaayo ko kadoul nimo man gud pero nagistorya nata pero ingon nila
+              taas padaw ko nimo so I dont know if its true or false kay diko mo
+              salig sakong amigo basin ako ang ma fools HAHAHA. Hays giLIVER
+              wako kahibaw ngano na ingon nako ni pero ako rang gi type unsay
+              mosud sa akong utok kay para murag nakig istorya rako nimo in
+              person bah since diman ko kadoul nimo because I'm super shy by
+              NewJeans.
+            </p>
+            <p>
+              <!-- ✏️ EDIT THIS — paragraph 2 -->
+              Anyway obviously its a murag confession ni diman gud ko mahiluna
+              og dili nako ni iingon pero nakahunahuna ko "unsa man say mahitabo
+              og iingon nako?" I think wala man sad since wako kahibaw unsay
+              mahitabo sunod ani after nimo ni mabasa🤔¯\_(ツ)_/¯ wako kahibaw
+              sad gani if mabasa ba nimo ni pero if ma basa nimo ni edi Hopia
+              like it🙂 CompE man gud ka so naghimo kog web nga ikaw ragyud ang
+              maka kita so kung mahimo don't share the link ako raning E-delete
+              after a month just incase dugay nimo na scan ang QR code and
+              mabasa ni. Unta mahatag sa imong classmate ang QR code HAHA.
+            </p>
+            <p>
+              <!-- ✏️ EDIT THIS — paragraph 3 (optional, delete if not needed) -->
+              Feel nako while gibasa nimo ni imo nang gijudge akong work huhu
+              bright raba ka plus DOST pagyud regular pagyud like oh my you're a
+              goddess🛐😇. Anyway arigathanks sa oras and pagbasa kita-kita
+              nalang ta sa eskwelahan bye bye bye by NSYNCヾ(＾ ∇ ＾)👋.
+            </p>
+          </div>
+          <!-- ─── END OF MESSAGE AREA ─── -->
+
+          <div class="card-sign">— Pinakilig mo around 220V˗ˏˋ⚡︎ˎˊ˗</div>
+
+          <!-- Meme inside card -->
+          <div class="card-meme">
+            <img src="images/meme4.jpg" alt="relatable meme" />
+            <p class="meme-caption">me every time you're around 😭</p>
+          </div>
+
+          <!-- Reply button -->
+          <div class="reply-section">
+            <p class="reply-prompt">So… what do you think? 👀</p>
+            <button class="btn-reply" id="btnReply" onclick="openReplyModal()">
+              Fine, I'll reply 🙄
+            </button>
+          </div>
+        </div>
+        <!-- /card -->
+      </div>
+      <!-- /sceneCard -->
+    </main>
+
+    <!-- ── MEME STRIP (bottom) ─────────────────────────────── -->
+    <div class="meme-strip bottom">
+      <img src="images/meme5.jpg" alt="meme" />
+      <img src="images/meme6.jpg" alt="meme" />
+      <img src="images/meme7.jpg" alt="meme" />
+    </div>
+
+    <!-- ── REPLY MODAL ─────────────────────────────────────── -->
+    <div class="modal-overlay" id="replyModal">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeReplyModal()">✕</button>
+        <div class="modal-icon">💬</div>
+        <h2 class="modal-title">Your reply to Slapsoil</h2>
+        <p class="modal-sub">
+          Me wait. No pressure(gamay ra 🤏 or naay gamay 😅)
+        </p>
+
+        <form id="replyForm">
+          <!-- Secret is this -->
+          <!-- 
+          <div class="field">
+            <label for="senderName">Your name</label>
+            <input type="text" id="senderName" placeholder="Uno 🌸" required />
+          </div>
+           -->
+          <div class="field">
+            <label for="replyMessage">Your message</label>
+            <textarea
+              id="replyMessage"
+              rows="5"
+              placeholder="Type anything… yes/no/maybe/I need time 😆"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-send" id="btnSend">
+            Send mo naaaa... (ó﹏ò｡)
+          </button>
+          <p class="send-note" id="sendNote"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- ── CONFETTI CANVAS ──────────────────────────────────── -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- ── EMAILJS ──────────────────────────────────────────── -->
+    <!--
+    ✏️  EMAILJS SETUP — 3 steps:
+    1. Go to https://www.emailjs.com and create a FREE account
+    2. Add a Gmail service → copy your SERVICE ID
+    3. Create an Email Template → copy your TEMPLATE ID
+    4. Go to Account → copy your PUBLIC KEY
+    Then paste the 3 values below where marked.
+  -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      // ✏️ REPLACE these 3 values with your real EmailJS credentials
+      const EMAILJS_PUBLIC_KEY = "IE1GxTGccCClxyAm8"; // from EmailJS Account page
+      const EMAILJS_SERVICE_ID = "service_866upsd"; // from Email Services
+      const EMAILJS_TEMPLATE_ID = "template_sdvs1pk"; // from Email Templates
+
+      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    </script>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
